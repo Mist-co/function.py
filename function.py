@@ -45,7 +45,7 @@ def lcm(a):
     try:
         c = int(a[0])
         for d in range(1, len(a)):
-            c = lcm(c, int(a[d]))
+            c = mcm(c, int(a[d]))
         return c
     except (TypeError):
         print("La funzione lcm() gestisce le liste, non gli interi: consultare mcm() per due interi.")
