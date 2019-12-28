@@ -17,7 +17,7 @@ def gcd(a):
     try:
         c = int(a[0])
         for d in range(1, len(a)):
-            c = mcd(c, int(a[1]))
+            c = mcd(c, int(a[d]))
         return c
     except (TypeError):
         print("La funzione gcd() gestisce le liste, non gli interi: consultare mcd() per due interi.")
