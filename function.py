@@ -1,7 +1,7 @@
 def mcd(a, b):
     """mcd() calcola il massimo comun divisore di due interi (o stringhe di cifre)"""
     try:
-        resto = a % b
+        resto = int(a) % int(b)
         while resto != 0:
             a = b
             b = resto
@@ -30,9 +30,9 @@ def gcd(a):
 def mcm(a, b):
     """mcm() calcola il minimo comune multiplo di due interi (o stringhe di cifre)"""
     try:
-        temp = mcd(a, b)
+        temp = mcd(int(a), int(b))
         if temp:
-            return (a // temp * b)
+            return (int(a) // temp * int(b))
         else:
             return 0
     except (TypeError):
@@ -43,9 +43,9 @@ def mcm(a, b):
 def lcm(a):
     """lcm() calcola il minimo comune multiplo tra tutti i valori interi (o stringhe di cifre) di una lista"""
     try:
-        c = a[0]
+        c = int(a[0])
         for d in range(1, len(a)):
-            c = lcm(c, a[1])
+            c = lcm(c, int(a[d]))
         return c
     except (TypeError):
         print("La funzione lcm() gestisce le liste, non gli interi: consultare mcm() per due interi.")
