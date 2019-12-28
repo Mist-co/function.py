@@ -112,6 +112,7 @@ tipo = 'str' restituisce una lista di stringhe
                     dati = ""
                 else:
                     dati = dati + dato
+            file.close()
             return data
         else:
             return None
